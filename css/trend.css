@@ -1,0 +1,16 @@
+.case-brand-mark--trend { gap: .9rem; }
+.case-brand-mark--trend img { width: 5.75rem; height: 4.25rem; object-fit: contain; }
+.case-brand-mark--trend span { color: var(--silver-light); font-size: .9rem; font-weight: 700; letter-spacing: .16em; }
+.trend-result { display: grid; gap: .55rem; max-width: 34rem; margin: 1.2rem auto 0; padding: clamp(1.35rem, 4vw, 2rem); border-radius: var(--radius-xl); text-align: center; }
+.trend-result > span { color: var(--ice-blue); font-size: .7rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+.trend-result > strong { color: var(--silver-light); font-size: clamp(1.8rem, 5vw, 2.8rem); line-height: 1.12; }
+.trend-result > p { margin: .2rem auto 0; max-width: 34ch; font-size: .82rem; }
+.trend-facebook-link { display: flex; justify-content: center; margin-top: 1.2rem; }
+.trend-disclaimer { margin-top: 1.5rem; }
+.project-visual--trend { background: radial-gradient(circle at 50% 8%, rgba(239,45,55,.18), transparent 32%), linear-gradient(140deg, #3b1921, #171b2b 58%, #0b1320); }
+.project-brand-preview--trend { width: min(100%, 15rem); min-height: 8.5rem; border-color: rgba(255,255,255,.2); background: rgba(7,13,25,.48); }
+.project-brand-preview--trend img { width: 7rem; height: 7rem; border: 0; border-radius: .4rem; background: transparent; box-shadow: none; }
+@media (max-width: 760px) {
+  .case-brand-mark--trend img { width: 4.8rem; height: 3.6rem; }
+  .trend-case-section .case-layout { gap: 2rem; }
+}

@@ -1,0 +1,75 @@
+@media (max-width: 980px) {
+  .nav-links { gap: .85rem; }
+  .home-hero, .page-hero--split, .story-grid, .case-layout, .experience-layout, .article-layout, .contact-layout { gap: 2.5rem; }
+  .home-hero { grid-template-columns: 1fr .85fr; }
+  .expertise-grid-home { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .projects-list { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .project-card--wide { grid-column: span 2; }
+  .footer-grid { grid-template-columns: 1.2fr .8fr .8fr; }
+}
+
+@media (max-width: 760px) {
+  .container, .navbar { width: min(var(--container), calc(100% - 32px)); }
+  .site-header { padding-top: .5rem; }
+  .navbar { min-height: 4rem; padding-left: .75rem; }
+  .menu-toggle { display: block; }
+  .nav-links { position: absolute; top: calc(100% + .55rem); right: 0; left: 0; display: grid; gap: .25rem; padding: .6rem; border: 1px solid var(--glass-border); border-radius: 1rem; opacity: 0; visibility: hidden; transform: translateY(-8px); background: rgba(7,13,25,.96); box-shadow: var(--shadow-deep); backdrop-filter: blur(20px); transition: opacity var(--ease), transform var(--ease), visibility var(--ease); }
+  .nav-links.is-open { opacity: 1; visibility: visible; transform: none; }
+  .nav-links > a, .nav-dropdown-toggle { width: 100%; padding: .78rem .75rem; }
+  .nav-dropdown-menu { position: static; display: none; min-width: 0; margin: 0 .35rem .4rem; opacity: 1; visibility: visible; transform: none; box-shadow: none; }
+  .nav-dropdown.is-open .nav-dropdown-menu { display: grid; }
+  .nav-cta { justify-content: center; margin-top: .35rem; }
+  .home-hero, .page-hero--split, .section-intro, .story-grid, .case-layout, .experience-layout, .article-layout, .contact-layout { grid-template-columns: 1fr; }
+  .home-hero { min-height: auto; padding-top: 4rem; }
+  .home-hero h1 { max-width: 8ch; }
+  .hero-visual { min-height: 23rem; order: -1; }
+  .hero-panel { width: min(15rem, 67%); }
+  .float-note--top { right: 2%; }
+  .float-note--bottom { left: 2%; }
+  .signal-strip { grid-template-columns: repeat(2, 1fr); gap: .7rem; }
+  .signal-strip span:first-child { grid-column: 1 / -1; }
+  .section-heading--row { display: block; }
+  .section-heading--row > p { margin-top: 1rem; }
+  .experience-band { grid-template-columns: auto 1fr; }
+  .experience-date { grid-column: 2; }
+  .process-rail { grid-template-columns: 1fr; }
+  .process-step + .process-step { border-top: 1px solid var(--glass-border); border-left: 0; }
+  .expertise-detail-grid, .projects-list, .beliefs-grid { grid-template-columns: 1fr; }
+  .project-card--wide { display: block; grid-column: auto; }
+  .project-card--wide .project-visual { min-height: 15rem; }
+  .case-sidebar, .article-aside { position: static; }
+  .role-head { display: block; }
+  .date-pill { display: inline-flex; margin-top: 1rem; }
+  .responsibility-list { grid-template-columns: 1fr; }
+  .media-grid, .video-grid--showcase { grid-template-columns: 1fr; gap: 1rem; }
+  .campaign-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .case-main { gap: 4.5rem; }
+  .case-section h2 { max-width: none; }
+  .form-grid { grid-template-columns: 1fr; }
+  .form-field--wide { grid-column: auto; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .footer-grid > :first-child { grid-column: 1 / -1; }
+  .footer-bottom { align-items: start; flex-direction: column; }
+}
+
+@media (max-width: 440px) {
+  h1 { font-size: clamp(2.8rem, 15vw, 4.2rem); }
+  .brand-lockup { font-size: .62rem; }
+  .hero-visual { min-height: 20rem; }
+  .hero-visual::before { width: 16rem; height: 16rem; }
+  .hero-visual::after { width: 21rem; height: 9rem; }
+  .hero-orbit { width: 20rem; height: 11rem; }
+  .float-note { padding: .65rem .7rem; }
+  .float-note--top { top: 4%; }
+  .float-note--bottom { bottom: 4%; }
+  .campaign-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-grid > :first-child { grid-column: auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+  .reveal { opacity: 1; transform: none; }
+}
+/* The home hero is intentionally text-led; no large artwork is rendered. */
+.home-hero .hero-visual { display: none !important; }

@@ -1,0 +1,7 @@
+.target-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.target-gallery figure { margin: 0; overflow: hidden; border: 1px solid rgba(243,245,248,.14); border-radius: 1.1rem; background: rgba(255,255,255,.035); }
+.target-gallery img { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; transition: transform .5s ease; }
+.target-gallery figure:hover img { transform: scale(1.035); }
+.target-gallery figcaption { padding: .75rem .9rem; color: var(--text-muted); font-size: .72rem; line-height: 1.5; }
+.case-section .target-gallery { margin-top: 1.2rem; }
+@media (max-width: 760px) { .target-gallery { grid-template-columns: 1fr; } }
